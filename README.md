@@ -16,6 +16,12 @@ During development, you can use the following npm scripts:
 
 * `npm run build`: Builds the CSS and JavaScript files for production. The minified files will be generated in the `/dist` directory.
 * `npm run sync`: Starts a local development server and automatically syncs changes made to the `/src` directory.
+* Open package.json and update --proxy url to match your local development URL.
+* Update wp-config to define your wp_env as development: define('WP_ENV', 'development'); is what you need to add to your wp-config.php file.
+// for dev
+define('WP_ENV', 'development'); 
+// for production
+// define('WP_ENV', 'production'); 
 
 ## Contributing
 
