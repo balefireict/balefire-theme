@@ -1,0 +1,1 @@
+<?php //Clean UP WordPress

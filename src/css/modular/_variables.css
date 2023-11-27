@@ -1,0 +1,8 @@
+:root {
+    --white: hsl(0, 0%, 98%);
+    --body: #1F1F1F;
+    --grey-mid: hsl(0, 0%, 50%);
+    --body-font: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    --base-padding: 1rem;
+    --additional-padding: 0.5rem;
+}

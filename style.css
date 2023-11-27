@@ -1,0 +1,26 @@
+/*
+	Theme Name: Balefire Blank
+	Theme URI: http://balelfiregancy.com
+	Description: HTML5 Blank WordPress Theme. Styles are updated in /src/css. Run node commands npm run build to compile and minify the styles in /src/modular
+	Version: 1.0.0
+	Author: Jeremy Nusser @balefireitc
+	Author URI: http://balefireagency.com
+	Tags: Blank, HTML5, CSS3
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+@media only screen and (min-width:320px) {}
+
+@media only screen and (min-width:480px) {}
+
+@media only screen and (min-width:768px) {}
+
+@media only screen and (min-width:1024px) {}
+
+@media only screen and (min-width:1140px) {}
+
+@media only screen and (min-width:1280px) {}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (min-resolution:144dpi) {}

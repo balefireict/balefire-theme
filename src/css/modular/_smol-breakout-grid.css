@@ -1,0 +1,66 @@
+/***
+ 🟣 SmolCSS Snippet Styles
+ */
+
+.smol-breakout-grid {
+    --max-content-width: 50ch;
+    --breakout-difference: 0.2;
+
+    /*  Compute total allowed grid width to `--breakout-difference` 
+      larger than content area  */
+    --breakout-grid-width: calc(var(--max-content-width) + (var(--max-content-width) * var(--breakout-difference)));
+
+    display: grid;
+    grid-template-columns:
+        [grid-start] 1fr [content-start] minmax(min(100%, var(--max-content-width)),
+            1fr) [content-end] 1fr [grid-end];
+    width: min(100% - 2rem, var(--breakout-grid-width));
+    row-gap: 1rem;
+    margin: 5vb auto;
+}
+
+.smol-breakout-grid>*:not(.breakout) {
+    grid-column: content;
+}
+
+.smol-breakout-grid>.breakout {
+    grid-column: grid;
+}
+
+
+
+/* Additional demo styles from SmolCSS.dev
+   Not all styles may be needed for this pen */
+body>ul {
+    list-style: none;
+    margin: 0;
+
+    &:not([data-padding-unset]) {
+        padding: 0;
+    }
+}
+
+[class*="smol"]:not([data-component])>*:not([data-unstyled]) {
+    display: grid;
+    padding: 1rem;
+    background-color: #E0D4F6;
+    color: #675883;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0.15em;
+    border: 1px dashed;
+
+    &:not([data-text]) {
+        place-content: center;
+    }
+
+    &[data-text] {
+        font-size: 1.15rem;
+        text-align: left;
+    }
+}
+
+[data-container-style] {
+    outline: 2px dotted #29344B;
+}

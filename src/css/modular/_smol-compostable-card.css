@@ -1,0 +1,88 @@
+/***
+ 🟣 SmolCSS Snippet Styles
+ */
+.smol-css-grid {
+    --min: 20ch;
+    --gap: 1rem;
+
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr));
+}
+
+.smol-card-component {
+    --img-ratio: 3/2;
+
+    display: flex;
+    flex-direction: column;
+    /* Supported for flexbox in modern browsers since April 2021 */
+    gap: 1rem;
+    box-shadow: 0 0 0.5rem hsl(0 0% 0% / 35%);
+    border-radius: 0.5rem;
+}
+
+.smol-card-component>img {
+    aspect-ratio: var(--img-ratio);
+    object-fit: cover;
+    width: 100%;
+}
+
+.smol-card-component>img:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.smol-card-component>img:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+    margin-top: auto;
+}
+
+.smol-card-component> :not(img) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    /* Prevent typography "orphans" */
+    text-wrap: pretty;
+}
+
+.smol-card-component> :not(img):first-child {
+    margin-top: 1rem;
+}
+
+/* Enhanced `:not()` accepts a selector list,
+but as a fallback you can chain `:not()` instead */
+.smol-card-component> :last-of-type:not(img, h2, h3, h4) {
+    margin-bottom: 1rem;
+}
+
+.smol-card-component> :not(h2, h3, h4) {
+    font-size: 0.9rem;
+}
+
+.smol-card-component>a {
+    align-self: start;
+}
+
+[class*="smol"]:not([data-component])>*:not([data-unstyled]) {
+    display: grid;
+    padding: 1rem;
+    background-color: #E0D4F6;
+    color: #675883;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0.15em;
+    border: 1px dashed;
+
+    &:not([data-text]) {
+        place-content: center;
+    }
+
+    &[data-text] {
+        font-size: 1.15rem;
+        text-align: left;
+    }
+}
+
+[data-container-style] {
+    outline: 2px dotted #29344B;
+}

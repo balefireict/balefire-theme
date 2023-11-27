@@ -1,0 +1,31 @@
+{
+  "name": "balefire",
+  "version": "1.0.0",
+  "description": "Basic boilerplate for a WordPress theme using PostCSS and CSSNano for minification. For development just type npm run dev to use Browsersync (Hot Module Replacement for watching live changes without refreshing). For production just type npm run build to minify and bundle your CSS.",
+  "main": "style.css",
+  "scripts": {
+    "build:style-css": "cross-env NODE_ENV=development postcss src/css/app.css -o ./dist/app.min.css",
+    "dev:style-css": "cross-env NODE_ENV=development postcss src/css/app.css -o ./dist/app.min.css",
+    "watch:style-css": "cross-env NODE_ENV=development postcss src/css/app.css -o ./dist/app.min.css --watch",
+    "build": "cross-env NODE_ENV=production npm run build:style-css",
+    "start": "cross-env NODE_ENV=development npm run watch",
+    "watch": "concurrently \"npm run watch:style-css\" \"npm run browser-sync\"",
+    "browser-sync": "browser-sync start --port 3000 --proxy \"balefire.blank.test\" --host=\"balefire.blank.test\" --files=\"./**/*.css, ./**/*.js, ./**/*.php\"",
+    "sync": "npm run start"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "browser-sync": "^2.29.3",
+    "concurrently": "^6.5.1",
+    "cross-env": "^6.0.3",
+    "cssnano": "^6.0.1",
+    "esbuild": "^0.12.29",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^14.1.0",
+    "postcss-nested-ancestors": "^2.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,41 @@
+/***
+ 🟣 SmolCSS Snippet Styles
+ */
+
+.smol-flexbox-grid {
+    --min: 10ch;
+    --gap: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.smol-flexbox-grid>* {
+    flex: 1 1 var(--min);
+}
+
+[class*="smol"]:not([data-component])>*:not([data-unstyled]) {
+    display: grid;
+    padding: 1rem;
+    background-color: #E0D4F6;
+    color: #675883;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0.15em;
+    border: 1px dashed;
+
+    &:not([data-text]) {
+        place-content: center;
+    }
+
+    &[data-text] {
+        font-size: 1.15rem;
+        text-align: left;
+    }
+}
+
+[data-container-style] {
+    outline: 2px dotted #29344B;
+}

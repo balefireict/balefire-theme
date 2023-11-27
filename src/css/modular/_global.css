@@ -1,0 +1,177 @@
+*,
+*:after,
+*:before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font: 400 1.125rem/1.4 var(--body-font);
+    color: var(--body-font);
+    background-color: var(--white);
+}
+
+body>ul {
+    list-style: none;
+    margin: 0;
+
+    &:not([data-padding-unset]) {
+        padding: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-top: calc(var(--base-padding) * 1.33);
+    padding-bottom: calc(var(--base-padding) * 0.33);
+    margin: inherit;
+    color: var(--body);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 1.9rem;
+}
+
+h4 {
+    font-size: 1.75rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.375rem;
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote {
+    padding-top: calc(var(--base-padding) * 0.5);
+    padding-bottom: calc(var(--base-padding) * 0.5);
+}
+
+.clear:before,
+.clear:after {
+    content: ' ';
+    display: table;
+}
+
+.clear:after {
+    clear: both;
+}
+
+.clear {
+    *zoom: 1;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #444;
+}
+
+a:focus {
+    outline: 0;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+input:focus {
+    outline: 0;
+    border: 1px solid #04A4CC;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+::selection {
+    background: #04A4CC;
+    color: #FFF;
+    text-shadow: none;
+}
+
+::-webkit-selection {
+    background: #04A4CC;
+    color: #FFF;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #04A4CC;
+    color: #FFF;
+    text-shadow: none;
+}
+
+textarea {
+    display: block;
+}
+
+form input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
+input[type='number'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='range'],
+input[type='color'],
+select,
+textarea {
+    border: 1px solid #CCC;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font: 400 1rem/1.4 var(--body-font);
+    color: var(--grey-mid);
+    background-color: var(--white);
+}

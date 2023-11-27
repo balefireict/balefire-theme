@@ -1,0 +1,31 @@
+/*
+	Theme Name: HTML5 Blank
+	Theme URI: http://balefire.com
+	Description: HTML5 Blank WordPress Theme
+	Version: 1.4.3
+	Author: Todd Motto (@toddmotto)
+	Author URI: http://toddmotto.com
+	Tags: Blank, HTML5, CSS3
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+@import url('./modular/_reset.css');
+@import url('./modular/_normalize.css');
+
+@import url('./modular/_fonts.css');
+@import url('./modular/_footer.css');
+@import url('./modular/_global.css');
+@import url('./modular/_header.css');
+@import url('./modular/_home.css');
+@import url('./modular/_print.css');
+@import url('./modular/_sidebar.css');
+@import url('./modular/_smol-background-picture.css');
+@import url('./modular/_smol-breakout-grid.css');
+@import url('./modular/_smol-centering.css');
+@import url('./modular/_smol-compostable-card.css');
+@import url('./modular/_smol-flexbox-grid.css');
+@import url('./modular/_smol-responsive-grid.css');
+@import url('./modular/_variables.css');
+@import url('./modular/_wp.css');
